@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/hw4css.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@1,800&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>MusicPlayer</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">MusicPlayer</h1>
+      <nav class="topnav" id="myTopnav">
+        <a class="lfloat active" href="#topMusic">Top Music</a>
+        <a class="lfloat" href="#recommended">Recommended For You</a>
+        <a class="lfloat" href="#justUpdated">Just Updated</a>
+        <a href="javascript:void(0);" class="icon">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
+    </header>
+
+    <div id="container">
+      <section id="topMusic">
+        <h2>Top Music</h2>
+        <div class="lfloat col-3">
+          <div class="gallery">
+            <img src="images/butter.png" alt="Butter - BTS" />
+            <div class="desc">
+              <h3>Butter</h3>
+              <p>BTS</p>
+            </div>
+          </div>
+        </div>
+        <div class="lfloat col-3">
+          <div class="gallery">
+            <img
+              src="images/industryBaby.jpg"
+              alt="Industry Baby - Lil Nas X & Jack Harlow"
+            />
+            <div class="desc">
+              <h3>Industry Baby</h3>
+              <p>Lil Nas X & Jack Harlow</p>
+            </div>
+          </div>
+        </div>
+        <div class="lfloat col-3">
+          <div class="gallery">
+            <img src="images/good4u.png" alt="Good 4 U - Olivia Rodrigo" />
+            <div class="desc">
+              <h3>Good 4 U</h3>
+              <p>Olivia Rodrigo</p>
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </section>
+
+      <section id="recommended">
+        <h2>Recommended For You</h2>
+        <div class="lfloat col-3">
+          <div class="gallery">
+            <img
+              src="images/betterTogether.jpeg"
+              alt="Better Together - Brown Eyed Soul"
+            />
+            <div class="desc">
+              <h3>Better Together</h3>
+              <p>Brown Eyed Soul</p>
+            </div>
+          </div>
+        </div>
+        <div class="lfloat col-3">
+          <div class="gallery">
+            <img
+              src="images/bwPicture.jpg"
+              alt="흑백사진 - KCM"
+            />
+            <div class="desc">
+              <h3>흑백사진</h3>
+              <p>KCM</p>
+            </div>
+          </div>
+        </div>
+        <div class="lfloat col-3">
+          <div class="gallery">
+            <img src="images/bigBird.jpg" alt="큰새 (Big Bird) - HYUKOH" />
+            <div class="desc">
+              <h3>큰새 (Big Bird)</h3>
+              <p>HYUKOH</p>
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </section>
+
+      <section id="justUpdated">
+        <h2>Just Updated</h2>
+        <div class="lfloat col-3">
+          <div class="gallery">
+            <img src="images/kingsDisease.jpg" alt="King's Disease - Nas" />
+            <div class="desc">
+              <h3>King's Disease</h3>
+              <p>Nas</p>
+            </div>
+          </div>
+        </div>
+        <div class="lfloat col-3">
+          <div class="gallery">
+            <img
+              src="images/releaseMe2.jfif"
+              alt="Release Me 2 - Barbra Streisand"
+            />
+            <div class="desc">
+              <h3>Release Me 2</h3>
+              <p>Barbra Streisand</p>
+            </div>
+          </div>
+        </div>
+        <div class="lfloat col-3">
+          <div class="gallery">
+            <img
+              src="images/struckByLightning.jfif"
+              alt="Struck By Lightning - Sara Keys"
+            />
+            <div class="desc">
+              <h3>Struck By Lightning</h3>
+              <p>Sara Keys</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="clear"></div>
+      <br /><br /><br /><br />
+      <footer>&copy; 2021 MusicPlayer</footer>
+    </div>
+
+    <script src="js/jquery-3.6.0.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".icon").click(function () {
+          if ($(this).parents("nav").hasClass("responsive")) {
+            $(this).parents("nav").removeClass("responsive");
+          } else {
+            $(this).parents("nav").addClass("responsive");
+          }
+        });
+
+        $("nav a.lfloat").click(function () {
+          $("nav a.lfloat").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
